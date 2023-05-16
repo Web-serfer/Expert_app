@@ -157,16 +157,18 @@ const name = "";
 
 <script>
   const name = "John Anderson_";
-  let i = 0;
-  const speed = 200; // скорость набора (в миллисекундах)
+let i = 0;
+const speed = 200;
 
-  function typeWriter() {
-    if (i < name.length) {
-      document.querySelector(".home__name").textContent += name.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
+function typeWriter() {
+  if (i < name.length) {
+    document.querySelector(".home__name").textContent += name.charAt(i);
+    i++;
+  } else {
+    i = 0;
+    document.querySelector(".home__name").textContent = "";
   }
+}
 
-  typeWriter();
+setInterval(typeWriter, speed);
 </script>
