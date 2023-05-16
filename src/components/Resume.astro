@@ -1,0 +1,112 @@
+<section id="resume" class="resume section container">
+  <hr>
+  <h2 class="section__title">Resume_</h2>
+
+  <div class="resume__container">
+    <!-- EDUCATION -->
+    <div class="resume__data">
+      <h3 class="resume__title">Education</h3>
+
+      <!-- item 1 -->
+      <div class="resume__item">
+        <h3 class="resume__subtitle">UNIVERSITY OF MINNESOTA TWIN CITIES</h3>
+        <p class="resume__date">2006 - 2010</p>
+        <p class="resume__descr">Bachelor Computer Engineering Lorem</p>
+      </div>
+
+      <!-- item 2 -->
+      <div class="resume__item">
+        <h3 class="resume__subtitle">SCHOOL OF INFORMATIOAL TECHNOLOGIES</h3>
+        <p class="resume__date">2004 - 2005</p>
+        <p class="resume__descr">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          ipsa fuga fugit ut. Eaque quo necessitatibus perferendis.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+
+      <!-- item 3 -->
+      <div class="resume__item">
+        <h3 class="resume__subtitle">LOREM IPSUM SCHOOL</h3>
+        <p class="resume__date">2006 - 2008</p>
+        <p class="resume__descr">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          ipsa fuga fugit ut. Eaque quo necessitatibus perferendis.
+        </p>
+      </div>
+    </div>
+    <!-- EMPOYMENT -->
+    <div class="resume__data">
+      <h3 class="resume__title">Employment</h3>
+
+      <!-- item 1 -->
+      <div class="resume__item">
+        <h3 class="resume__subtitle">APPLE</h3>
+        <p class="resume__date">2006 - 2010</p>
+        <p class="resume__descr">Senior Full Stack Developer</p>
+      </div>
+
+      <!-- item 2 -->
+      <div class="resume__item">
+        <h3 class="resume__subtitle">TECH UNIVERSITY</h3>
+        <p class="resume__date">2004 - 2005</p>
+        <p class="resume__descr">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          ipsa fuga fugit ut. Eaque quo necessitatibus perferendis.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+
+      <!-- item 3 -->
+      <div class="resume__item">
+        <h3 class="resume__subtitle">MOLLYS STUDIO</h3>
+        <p class="resume__date">2006 - 2008</p>
+        <p class="resume__descr">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          ipsa fuga fugit ut. Eaque quo necessitatibus perferendis.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .resume__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.75rem;
+  }  
+
+  .resume__item {
+    border-left: 2px solid var(--primary-color);
+    padding-left: 1.6rem;
+    position: relative;
+  }
+
+  .resume__item:not(:last-child) {
+    padding-bottom: 3rem;
+  }
+
+  .resume__item::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    position: absolute;
+    left: -0.48rem;
+    background-color: var(--bg-color);
+  }
+
+  .resume__subtitle {
+    color: var(--text-color);
+    margin-bottom: 0.36em;
+  }
+
+  .resume__subtitle {
+    color: var(--text-color-alt);
+    margin-bottom: 0.7rem;
+  }
+
+  .resume__descr {
+    text-align: justify;
+  }
+</style>

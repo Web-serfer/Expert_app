@@ -1,0 +1,207 @@
+---
+import img1 from "../assets/project-1.png";
+import img2 from "../assets/project-2.png";
+import img3 from "../assets/project-3.png";
+---
+
+<section id="portfolio" class="portfolio section container">
+  <hr />
+  <h2 class="section__title">Work_</h2>
+
+  <div class="project__categories">
+    <button class="category__btn text-xs active-work" data-filter="all">
+      ALL
+    </button>
+    <button class="category__btn text-xs" data-filter=".app">
+      MOBILE APPS
+    </button>
+    <button class="category__btn text-xs" data-filter=".web">
+      WEB SITES
+    </button>
+    <button class="category__btn text-xs" data-filter=".landing">
+      LANDING PAGES
+    </button>
+  </div>
+
+  <div class="projects__container">
+    <!-- project-item 1 -->
+    <div class="project__item grid mix app">
+      <img src={img1} class="project__img" alt="img1" />
+
+      <div class="project__data">
+        <h3 class="project__title text-lg">
+          MOBILE AND DESCTOP APP FOR LONDON HOSTEL STORE
+        </h3>
+        <p class="project__descr">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
+          provident earum est esse dolor consequuntur ipsam, exercitationem
+          nobis vitae aspernatur magnam ipsa suscipit eius dolore.
+        </p>
+        <h4 class="project__stack text-xs">USED STACK</h4>
+        <ul class="tags text-sm">
+          <li>html5</li>
+          <li>css33</li>
+          <li>JavaScript</li>
+          <li>BEM</li>
+          <li>bower</li>
+          <li>grunt</li>
+        </ul>
+
+        <a href="#" class="project__link text-sm">www.superapp.com</a>
+      </div>
+    </div>
+
+    <!-- project-item 2 -->
+    <div class="project__item grid mix web">
+      <img src={img2} class="project__img" alt="img2" />
+
+      <div class="project__data">
+        <h3 class="project__title text-lg">ADMIN TEMPLATE FOR PHOTO SERVICE</h3>
+        <p class="project__descr">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
+          provident earum est esse dolor consequuntur ipsam, exercitationem
+          nobis vitae aspernatur magnam ipsa suscipit eius dolore.
+        </p>
+        <h4 class="project__stack text-xs">USED STACK</h4>
+        <ul class="tags text-sm">
+          <li>html5</li>
+          <li>css33</li>
+          <li>JavaScript</li>
+          <li>BEM</li>
+          <li>bower</li>
+          <li>grunt</li>
+        </ul>
+
+        <a href="#" class="project__link text-sm">www.superapp.com</a>
+      </div>
+    </div>
+
+    <!-- project-item 3 -->
+    <div class="project__item grid mix landing">
+      <img src={img3} class="project__img" alt="img3" />
+
+      <div class="project__data">
+        <h3 class="project__title text-lg">WEB APP PAGE TRAVEL COMPANY</h3>
+        <p class="project__descr">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
+          provident earum est esse dolor consequuntur ipsam, exercitationem
+          nobis vitae aspernatur magnam ipsa suscipit eius dolore.
+        </p>
+        <h4 class="project__stack text-xs">USED STACK</h4>
+        <ul class="tags text-sm">
+          <li>html5</li>
+          <li>css33</li>
+          <li>JavaScript</li>
+          <li>BEM</li>
+          <li>bower</li>
+          <li>grunt</li>
+        </ul>
+
+        <a href="#" class="project__link text-sm">www.superapp.com</a>
+      </div>
+    </div>
+  </div>  
+</section>
+
+<style>
+  .project__categories {
+    display: flex;
+    column-gap: 3rem;
+    margin-bottom: 1.87rem;
+  }
+
+  .category__btn {
+    color: var(--text-color-alt);
+    font-weight: var(--bold);
+    font-family: var(--mono-font);
+    position: relative;
+    transition: var(--transition);
+  }
+
+  .category__btn:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  .active-work {
+    color: var(--primary-color);
+  }
+
+  .projects__container {
+    display: grid;
+    row-gap: 2.5rem;
+  }
+
+  .project__item {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+  }
+
+  .project__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project__data {
+    padding: 3rem 3rem 2.5rem 1.875rem;
+    border: 1px solid var(--border-color);
+  }
+
+  .project__title {
+    margin-bottom: 0.8rem;
+    text-align: justify;
+  }
+
+  .project__descr {
+    margin-bottom: 2.5em;
+    text-align: justify;
+  }
+
+  .project__stack {
+    margin-bottom: 1.25em;
+  }
+
+  .tags li {
+    display: inline-block;
+    margin-right: 0.6rem;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 14%);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.2rem;
+  }
+
+  .project__link {
+    float: right;
+    margin-top: 3.9em;
+    color: var(--primary-color);
+    font-family: var(--mono-font);
+    text-decoration: underline;
+    transition: var(--transition);
+  }
+
+  .project__link:hover {
+    color: blue;
+    text-decoration: underline;
+  }  
+</style>
+
+<script>
+import mixitup from 'mixitup';
+ let mixerProjects = mixitup('.projects__container', {
+    selectors: {
+        target: '.project__item'
+    },
+    animation: {
+        duration: 300
+    }
+});
+
+const linkWork = document.querySelectorAll('.category__btn');
+
+function activeWork() {
+  linkWork.forEach((a) => a.classList.remove('active-work'));
+  this.classList.add('active-work')
+}
+
+linkWork.forEach((a) => a.addEventListener('click', activeWork));
+</script>

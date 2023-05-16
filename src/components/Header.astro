@@ -1,0 +1,103 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<header id="header">
+  <nav class="nav container">
+    <div id="nav-menu">
+      <ul class="nav__list">
+        <li>
+          <a href="#home" class="nav__link active-link">Hello</a>
+        </li>
+        <li>
+          <a href="#services" class="nav__link">Services</a>
+        </li>
+        <li>
+          <a href="#resume" class="nav__link">Resume</a>
+        </li>
+        <li>
+          <a href="#portfolio" class="nav__link">Portfolio</a>
+        </li>
+        <li>
+          <a href="#blog" class="nav__link">Blog</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav__link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Mobile button -->
+      <div class="btn__mobile">
+        <div id="nav-close" class="nav__close">
+          <Icon pack="ion" name="close-outline" size={25} />
+        </div>
+
+        <div class="nav__toggle">
+          <Icon pack="ic" name="outline-menu" size={25} />
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  #header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+  }
+
+  .nav {
+    height: 3rem;
+  }
+
+  #nav-menu {
+    display: flex;
+  }
+  .nav__list {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-end;
+  }
+
+  .nav__link {
+    color: var(--bg-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: var(--bold);
+    letter-spacing: 1px;
+    font-family: var(--mono-font);
+    transition: var(--transition);
+    position: relative;
+  }
+
+  .nav__link:hover {
+    opacity: 0.5;
+  }
+
+  .nav__link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .nav__link:hover::after {
+    opacity: 1;
+  }
+
+  .active-link {
+    opacity: .5;
+  }
+
+  .active-link::after {
+    opacity: 1;
+  }
+</style>

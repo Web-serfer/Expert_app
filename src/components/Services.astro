@@ -1,0 +1,178 @@
+---
+import img1 from "../assets/web-design.png";
+import img2 from "../assets/laptop.png";
+import img3 from "../assets/smartphone-call.png";
+import img4 from "../assets/paint-palette.png";
+import img5 from "../assets/verified.png";
+import img6 from "../assets/operator.png";
+---
+
+
+<section id="services" class="services section container">
+  <hr>
+  <h2 class="section__title">Services_</h2>
+
+  <div class="services__container">
+    <!-- item 1 -->
+    <div class="services__item">
+      <div class="icon__box">
+        <img src={img1} class="services__icon" alt="img1" />
+        <div class="services__dot">
+          <span class="dot"></span>
+        </div>
+      </div>
+      <h3 class="services__title text-lg">WEB DESIGN</h3>
+      <p class="services__detail">
+        Survived not only five centuries, but also the leap into electronic
+        typesetting, remaining essentially unchanged. It was popularised in
+      </p>
+    </div>
+
+    <!-- item 2 -->
+    <div class="services__item">
+      <div class="icon__box">
+        <img src={img2} class="services__icon" alt="img2" />
+        <div class="services__dot">
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <h3 class="services__title text-lg">WEB DEVELOPMENT</h3>
+      <p class="services__detail">
+        Survived not only five centuries, but also the leap into electronic
+        typesetting, remaining essentially unchanged. It was popularised in
+      </p>
+    </div>
+
+    <!-- item 3 -->
+    <div class="services__item">
+      <div class="icon__box">
+        <img src={img3} class="services__icon" alt="img3" />
+        <div class="services__dot">
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <h3 class="services__title text-lg">MOBILE DEVELOPMENT</h3>
+      <p class="services__detail">
+        Survived not only five centuries, but also the leap into electronic
+        typesetting, remaining essentially unchanged. It was popularised in
+      </p>
+    </div>
+
+    <!-- item 4 -->
+    <div class="services__item">
+      <div class="icon__box">
+        <img src={img4} class="services__icon" alt="img4" />
+        <div class="services__dot">
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <h3 class="services__title">CREATIVE DESIGN</h3>
+      <p class="services__detail">
+        Survived not only five centuries, but also the leap into electronic
+        typesetting, remaining essentially unchanged. It was popularised in
+      </p>
+    </div>
+
+    <!-- item 5 -->
+    <div class="services__item">
+      <div class="icon__box">
+        <img src={img5} class="services__icon" alt="img5" />
+        <div class="services__dot">
+          <span class="dot"></span>
+        </div>
+      </div>
+      <h3 class="services__title text-lg">BRANDING IDENTIFY</h3>
+      <p class="services__detail">
+        Survived not only five centuries, but also the leap into electronic
+        typesetting, remaining essentially unchanged. It was popularised in
+      </p>
+    </div>
+
+    <!-- item 6 -->
+    <div class="services__item">
+      <div class="icon__box">
+        <img src={img6} class="services__icon" alt="img6" />
+        <div class="services__dot">
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <h3 class="services__title text-lg">24/7 SUPPORT</h3>
+      <p class="services__detail">
+        Survived not only five centuries, but also the leap into electronic
+        typesetting, remaining essentially unchanged. It was popularised in
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>  
+  .services__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+  }
+
+  .services__item {
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 1.25rem 1.875rem;
+    text-align: center;
+  }
+
+  .icon__box {
+    border: 1px solid var(--border-color);
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+    position: relative;
+    display: flex;
+  }
+
+  .services__icon {
+    width: 32px;
+    margin: auto;
+  }
+
+  .services__dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;    
+    animation: service-dot 2s linear infinite;
+    animation-play-state: paused;
+  }
+
+  .services__item:hover .services__dot {
+    animation-play-state: running;
+  }
+
+  @keyframes service-dot {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+
+  .dot {
+    width: 13px;
+    height: 13px;
+    background-color: var(--title-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0.9rem;
+  }
+
+  .services__title {
+    margin-bottom: .8em;
+  }
+</style>

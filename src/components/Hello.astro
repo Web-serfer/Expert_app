@@ -1,0 +1,73 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<section class="hello section container">
+  <h2 class="section__title">Hello<span>_</span></h2>
+  <p class="hello__details">
+    Survived not only five centuries, but also the leap into electronic
+    typesetting, remaining essentially unchanged. It was popularised in the
+    1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.
+  </p>
+  <p class="hello__details">
+    Survived not only five centuries, but also the leap into electronic
+    typesetting, remaining essentially unchanged. It was popularised in the
+    1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.
+  </p>
+  <p class="hello__details">
+    Survived not only five centuries, but also the leap into electronic
+    typesetting, remaining essentially unchanged. It was popularised in the
+    1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.
+  </p>
+  <a href="../assets/John-Cv.pdf" class="btn" title="download file" download>
+    <Icon pack="mdi" name="file-download" size={25} />
+    DOWNLOAD CV
+  </a>
+</section>
+
+<style>
+  /* .section__title span {
+    animation: blink 2s linear infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  } */
+
+  .hello__details {
+    margin-bottom: 1rem;
+    font-size: var(--fs-lg);
+    line-height: 1.65em;
+    text-align: justify;
+  }
+
+  .btn {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+    font-size: var(--fs-sm);
+    line-height: 1.43em;
+    color: var(--bg-color);
+    font-weight: bold;
+    max-width: 200px;
+    background-color: var(--text-color);
+    padding: 0.5em 2em;
+    border-radius: 1.5rem;
+    transition: var(--transition);
+  }
+
+  .btn:hover {
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,20 @@
+---
+import { SEO } from "astro-seo";
+
+export interface Props {
+  title: string;  
+  seoDescr: string;
+}
+
+const { title, seoDescr } = Astro.props;
+---
+
+<head>
+  <SEO     
+    description={seoDescr} 
+  /> 
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+</head>

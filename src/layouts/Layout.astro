@@ -1,0 +1,17 @@
+---
+import Head from "../components/Head.astro";
+import "../styles/main.css";
+
+const { title, seoDescr } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <Head 
+		title={title} 	
+		seoDescr={seoDescr}
+	/>
+  <body>
+    <slot />
+  </body>
+</html>
