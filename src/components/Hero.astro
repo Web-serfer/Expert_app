@@ -11,7 +11,7 @@ const name = "";
     <div class="home__data">
       <!-- <h1 class="home__name">{name}</h1> -->
       <h1 class="home__name">Евгений Орлов</h1>
-      <p class="home__work">эксперт(оценшик) - высшей квалификации</p>
+      <p class="home__work">эксперт(оценшик) высшей квалификации</p>
       <dl class="home__list">
         <dt>AGE:</dt>
         <dd>23</dd>
@@ -153,25 +153,4 @@ const name = "";
   }
 </style>
 
-<script>
-  const name = "John Anderson_";
-  let i = 0;
-  const speed = 200;
-  const interval = 60000;
 
-  function typeWriter() {
-    if (i < name.length) {
-      document.querySelector(".home__name").textContent += name.charAt(i);
-      i++;
-    } else {
-      i = 0;
-      document.querySelector(".home__name").textContent = "";
-    }
-  }
-
-  setInterval(() => {
-    i = 0;
-    document.querySelector(".home__name").textContent = "";
-    setTimeout(typeWriter, speed);
-  }, interval);
-</script>
