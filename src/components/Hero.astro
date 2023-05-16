@@ -159,6 +159,7 @@ const name = "";
   const name = "John Anderson_";
 let i = 0;
 const speed = 200;
+const interval = 60000; 
 
 function typeWriter() {
   if (i < name.length) {
@@ -170,5 +171,9 @@ function typeWriter() {
   }
 }
 
-setInterval(typeWriter, speed);
+setInterval(() => {
+  i = 0;
+  document.querySelector(".home__name").textContent = "";
+  setTimeout(typeWriter, speed);
+}, interval);
 </script>
