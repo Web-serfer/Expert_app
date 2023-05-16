@@ -4,15 +4,13 @@ import { Icon } from "astro-icon";
 const name = "";
 ---
 
-
-
 <section id="home">
   <div class="home__container container grid">
     <img src={profileImg} class="home__img" alt="profile" />
 
     <div class="home__data">
       <!-- <h1 class="home__name">{name}</h1> -->
-      <h1 class="home__name">{name}</h1>
+      <h1 class="home__name">Евгений Орлов</h1>
       <p class="home__work">frontend developer, QA_engineer</p>
       <dl class="home__list">
         <dt>AGE:</dt>
@@ -108,7 +106,7 @@ const name = "";
     font-family: var(--mono-font);
   }
 
-  .home__name {   
+  .home__name {
     font-size: var(--fs-h1);
     line-height: 1.14em;
     margin: 0.9em 0 0.23em;
@@ -157,23 +155,23 @@ const name = "";
 
 <script>
   const name = "John Anderson_";
-let i = 0;
-const speed = 200;
-const interval = 60000; 
+  let i = 0;
+  const speed = 200;
+  const interval = 60000;
 
-function typeWriter() {
-  if (i < name.length) {
-    document.querySelector(".home__name").textContent += name.charAt(i);
-    i++;
-  } else {
+  function typeWriter() {
+    if (i < name.length) {
+      document.querySelector(".home__name").textContent += name.charAt(i);
+      i++;
+    } else {
+      i = 0;
+      document.querySelector(".home__name").textContent = "";
+    }
+  }
+
+  setInterval(() => {
     i = 0;
     document.querySelector(".home__name").textContent = "";
-  }
-}
-
-setInterval(() => {
-  i = 0;
-  document.querySelector(".home__name").textContent = "";
-  setTimeout(typeWriter, speed);
-}, interval);
+    setTimeout(typeWriter, speed);
+  }, interval);
 </script>
