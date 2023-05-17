@@ -3,7 +3,7 @@ import { Icon } from "astro-icon";
 ---
 
 <section class="hello section container">
-  <h2 class="section__title">Об эксперте</h2>
+  <h2 class="section__title about">Об эксперте</h2>  
   <p class="hello__details">
     Survived not only five centuries, but also the leap into electronic
     typesetting, remaining essentially unchanged. It was popularised in the
@@ -27,7 +27,7 @@ import { Icon } from "astro-icon";
   </p>
   <a href="../assets/John-Cv.pdf" class="btn" title="download file" download>
     <Icon pack="mdi" name="file-download" size={25} />
-   ПРАЙС ЭКСПЕРТА
+    ПРАЙС ЭКСПЕРТА
   </a>
 </section>
 
@@ -56,5 +56,15 @@ import { Icon } from "astro-icon";
 
   .btn:hover {
     text-decoration: underline;
+  }
+
+  /* ======= (Small Devices) ======= */
+  @media (width < 600px) {
+    .about {
+      text-align: center;
+    }
+    .hello {
+      padding: 0 1rem;
+    }
   }
 </style>

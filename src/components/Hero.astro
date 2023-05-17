@@ -86,6 +86,7 @@ const name = "";
     display: flex;
     gap: 1rem;
     width: 100%;
+    padding-top: 1rem;
   }
 
   .home__img,
@@ -166,14 +167,22 @@ const name = "";
 
   /* ======= (Medium Devices) ======= */
   @media (width < 804px) {
-    #home {      
-      background-position: top left;      
+    #home {
+      background-position: top left;
     }
     .home__container {
       flex-direction: column;
       column-gap: 1rem;
       align-items: center;
-      padding-top: 1rem;
+      padding-top: 0;
+    }
+
+    .home__img {
+      margin-bottom: 1rem;
+    }
+
+    .home__name {
+      text-align: center;
     }
 
     .home__data {
@@ -181,7 +190,6 @@ const name = "";
     }
   }
 
-  
   /* ======= (Small Devices) ======= */
   @media (width < 600px) {
     .home__name {
