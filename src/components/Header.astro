@@ -4,40 +4,59 @@ import { Icon } from "astro-icon";
 
 <header id="header">
   <nav class="nav container">
-    <div id="nav-menu">
-      <ul class="nav__list">
-        <li>
-          <a href="#home" class="nav__link active-link">Главная</a>
-        </li>
-        <li>
-          <a href="#services" class="nav__link">Услуги</a>
-        </li>
-        <li>
-          <a href="#resume" class="nav__link">Образование</a>
-        </li>
-        <li>
-          <a href="#portfolio" class="nav__link">Работа</a>
-        </li>
-        <li>
-          <a href="#blog" class="nav__link">Блог</a>
-        </li>
-        <li>
-          <a href="#contact" class="nav__link">Контакты</a>
-        </li>
-      </ul>
+    <div class="logo">
+      <a href="/">Expert_086</a>
+    </div>
+    <ul class="nav__list">
+      <li>
+        <a href="#home" class="nav__link active-link">Главная</a>
+      </li>
+      <li>
+        <a href="#services" class="nav__link">Услуги</a>
+      </li>
+      <li>
+        <a href="#resume" class="nav__link">Образование</a>
+      </li>
+      <li>
+        <a href="#portfolio" class="nav__link">Работа</a>
+      </li>
+      <li>
+        <a href="#blog" class="nav__link">Блог</a>
+      </li>
+      <li>
+        <a href="#contact" class="nav__link">Контакты</a>
+      </li>
+    </ul>
 
-      <!-- Mobile button -->
-      <div class="btn__mobile">
-        <div id="nav-close" class="nav__close">
-          <Icon pack="ion" name="close-outline" size={25} />
-        </div>
-
-        <div class="nav__toggle">
-          <Icon pack="ic" name="outline-menu" size={25} />
-        </div>
-      </div>
+    <!-- toggle button -->
+    <div class="toggle_btn">
+      <Icon pack="uil" name="bars" size={25} />
     </div>
   </nav>
+
+  <!-- Dropdown menu -->
+  <div class="dropdown_menu">
+    <ul class="dm-nav_list">
+      <li>
+        <a href="#home" class="dm-nav__link active-link">Главная</a>
+      </li>
+      <li>
+        <a href="#services" class="dm-nav__link">Услуги</a>
+      </li>
+      <li>
+        <a href="#resume" class="dm-nav__link">Образование</a>
+      </li>
+      <li>
+        <a href="#portfolio" class="dm-nav__link">Работа</a>
+      </li>
+      <li>
+        <a href="#blog" class="dm-nav__link">Блог</a>
+      </li>
+      <li>
+        <a href="#contact" class="dm-nav__link">Контакты</a>
+      </li>
+    </ul>
+  </div>
 </header>
 
 <style>
@@ -50,12 +69,29 @@ import { Icon } from "astro-icon";
   }
 
   .nav {
-    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
   }
 
-  #nav-menu {
-    display: flex;
+  .logo a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: var(--bold);
+    font-size: 1.1rem;
+    background-image: linear-gradient(
+      to bottom right,
+      var(--text-color-alt),
+      #fff
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
+
   .nav__list {
     display: flex;
     gap: 3rem;
@@ -74,7 +110,13 @@ import { Icon } from "astro-icon";
   }
 
   .nav__link:hover {
-    opacity: 0.5;
+    background-image: linear-gradient(
+      to bottom right,
+      var(--text-color-alt),
+      #fff
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .nav__link::after {
@@ -94,12 +136,79 @@ import { Icon } from "astro-icon";
   }
 
   .active-link {
-    opacity: .5;
+    opacity: 0.5;
   }
 
   .active-link::after {
     opacity: 1;
   }
 
-  
+  .toggle_btn {
+    color: #fff;
+    display: none;
+  }
+
+  .toggle_btn:hover {
+    cursor: pointer;
+
+  }
+
+  /* ==== Dropdown menu ==== */
+
+  .dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 3rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .dropdown_menu.open {
+    height: 300px;
+    padding-top: 0.7rem;
+  }
+
+  .dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dropdown_menu li a {
+    color: #fff;
+  }
+
+  /* ======= (Medium Devices) ======= */
+  @media (width < 992px) {
+    .nav__list {
+      display: none;
+    }
+    .dropdown_menu {
+      display: block;
+    }
+
+    .toggle_btn {
+      display: block;
+    }
+  }
 </style>
+
+<script>
+  const toggleBtn = document.querySelector(".toggle_btn");
+  const toggleBtnIcon = document.querySelector(".toggle_btn .bars");
+  const dropDownMenu = document.querySelector(".dropdown_menu");
+
+  toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle("open");
+    const isOpen = dropDownMenu.classList.contains("open");
+
+    
+  };
+</script>

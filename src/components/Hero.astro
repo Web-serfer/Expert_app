@@ -9,18 +9,17 @@ const name = "";
     <img src={profileImg} class="home__img" alt="profile" />
 
     <div class="home__data">
-      <!-- <h1 class="home__name">{name}</h1> -->
       <h1 class="home__name">Евгений Орлов</h1>
       <p class="home__work">эксперт(оценщик) высшей квалификации</p>
       <dl class="home__list">
-        <dt>AGE:</dt>
-        <dd>23</dd>
-        <dt>PHONE:</dt>
-        <dd>8 (234) 456-33-33</dd>
-        <dt>EMAIL:</dt>
+        <dt>стаж:</dt>
+        <dd>15 лет</dd>
+        <dt>телефон:</dt>
+        <dd>+7 (912) 816-86-72</dd>
+        <dt>email:</dt>
         <dd>mail@mail.ru</dd>
-        <dt>ADDRESS:</dt>
-        <dd>Melboure Victoria 3000 Australia</dd>
+        <dt>Адрес:</dt>
+        <dd>ХМАО-Югра,г.Сургут</dd>
       </dl>
 
       <div class="home__socials">
@@ -116,17 +115,20 @@ const name = "";
     margin-bottom: 2.5em;
   }
 
-  .home__list dt {
+  dt {
     float: left;
     font-weight: var(--bold);
     opacity: 0.4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
-  .home__list dd {
+  dd {
     padding-left: 6.25em;
+    letter-spacing: 1px;
   }
 
-  .home__list dd:not(:last-child) {
+  dd:not(:last-child) {
     margin-bottom: 0.94em;
   }
 
@@ -152,5 +154,3 @@ const name = "";
     color: var(--bg-color);
   }
 </style>
-
-
