@@ -61,8 +61,11 @@ const name = "";
 
 <style>
   #home {
+    width: 100%;
     background: url("../assets/home_bg.jpg");
-    background-size: cover;     
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
     padding-top: calc(5.5rem - 2.125rem);
     color: var(--bg-color);
     position: relative;
@@ -82,6 +85,7 @@ const name = "";
   .home__container {
     display: flex;
     gap: 1rem;
+    width: 100%;
   }
 
   .home__img,
@@ -115,7 +119,6 @@ const name = "";
     line-height: 1.14em;
     letter-spacing: 1px;
     margin: 0.9em 0 0.23em;
-
   }
 
   .home__work {
@@ -163,6 +166,9 @@ const name = "";
 
   /* ======= (Medium Devices) ======= */
   @media (width < 804px) {
+    #home {      
+      background-position: top left;      
+    }
     .home__container {
       flex-direction: column;
       column-gap: 1rem;
@@ -172,12 +178,6 @@ const name = "";
 
     .home__data {
       padding-top: 1rem;
-    }
-  }
-
-  @media (width < 512px) {
-    #home {
-      background-size: auto 100%; 
     }
   }
 </style>
