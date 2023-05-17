@@ -15,8 +15,8 @@
   --border-color: #f1f1f1;
   --linear-gradient: linear-gradient(
     54deg,
-    rgba(45, 45, 45, 0.95) 34%,
-    rgba(45, 45, 45, 0.95)
+    rgba(45, 45, 45, 0.95) 20%,
+    rgba(21, 20, 20, 0.75)
   );
   --transition: all 500ms ease;
 

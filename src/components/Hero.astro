@@ -61,9 +61,8 @@ const name = "";
 
 <style>
   #home {
-    background: url("../assets/home-bg.jpg");
-    background-size: cover;
-    background-position: 50%;
+    background: url("../assets/home_bg.jpg");
+    background-size: cover;   
     padding-top: calc(5.5rem - 2.125rem);
     color: var(--bg-color);
     position: relative;
@@ -174,9 +173,9 @@ const name = "";
     }
   }
 
-  @media (max-width: 512px) {
-  #home {
-    background-size: 100%; 
+  @media (width < 512px) {
+    #home {
+      background-size: auto 100%; 
+    }
   }
-}
 </style>
