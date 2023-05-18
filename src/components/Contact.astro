@@ -1,3 +1,7 @@
+---
+import Footer from "./Footer.astro";
+---
+
 <section id="contact" class="contact section">
   <div class="contact__content container">
     <h2 class="section__title">Контакты</h2>
@@ -68,11 +72,7 @@
           <button type="submit">ОТПРАВИТЬ</button>
         </form>
 
-        <footer>
-          <p class="footer__copy">
-            2002 - 2023 &copy; Expert086.ru <span>Все права защишены</span>
-          </p>
-        </footer>
+        <Footer />
       </div>
     </div>
   </div>
@@ -210,11 +210,6 @@
 
     .contact__form {
       padding-top: 2rem;
-    }
-
-    .footer__copy span {
-      display: block;
-      margin-top: 0.5rem;
     }
   }
 </style>
