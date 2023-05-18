@@ -6,7 +6,7 @@ import img3 from "../assets/project-3.png";
 
 <section id="portfolio" class="portfolio section container">
   <hr />
-  <h2 class="section__title">Work_</h2>
+  <h2 class="section__title">Работа</h2>
 
   <div class="project__categories">
     <button class="category__btn text-xs active-work" data-filter="all">
@@ -182,7 +182,19 @@ import img3 from "../assets/project-3.png";
   .project__link:hover {
     color: blue;
     text-decoration: underline;
-  }  
+  } 
+  
+  
+  /* ======= (Small Devices) ======= */
+  @media (width < 600px) {
+    .project__categories {
+      justify-content: center;
+    }
+
+    .project__item {   
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 
 <script>

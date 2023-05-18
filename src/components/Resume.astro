@@ -37,7 +37,7 @@
     </div>
     <!-- EMPOYMENT -->
     <div class="resume__data">
-      <h3 class="resume__title">Деятельность</h3>
+      <h3 class="resume__title activity">Деятельность</h3>
 
       <!-- item 1 -->
       <div class="resume__item">
@@ -112,17 +112,18 @@
     text-align: justify;
   }
 
-  /* ======= (Small Devices) ======= */
+  /* ==== Media Queries ==== */
   @media (width < 600px) {
     .resume__container {
       grid-template-columns: 1fr;
     }
 
+    .resume__title {
+      text-align: center;
+    }
 
-  .resume__title {
-    color: var(--text-color);
-    letter-spacing: 0.08em;
-    margin-bottom: 2em;
-    font-size: 1.2rem;
+    .activity {
+      padding-top: 2rem;
+    }
   }
 </style>
