@@ -7,24 +7,13 @@ import { Icon } from "astro-icon";
   <p class="about__details">
     Survived not only five centuries, but also the leap into electronic
     typesetting, remaining essentially unchanged. It was popularised in the
-    1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker
-    including versions of Lorem Ipsum.
-  </p>
+    1960s with the release of Letraset sheets containing Lorem Ipsum passages,and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>    
   <p class="about__details">
     Survived not only five centuries, but also the leap into electronic
     typesetting, remaining essentially unchanged. It was popularised in the
-    1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker
-    including versions of Lorem Ipsum.
-  </p>
-  <p class="about__details">
-    Survived not only five centuries, but also the leap into electronic
-    typesetting, remaining essentially unchanged. It was popularised in the
-    1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker
-    including versions of Lorem Ipsum.
-  </p>
+    1960s with the release of Letraset sheets containing Lorem Ipsum passages,and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>    
   <a href="../assets/John-Cv.pdf" class="btn" title="download file" download>
     <Icon pack="mdi" name="file-download" size={25} />
     ПРАЙС-ЛИСТ
@@ -34,10 +23,26 @@ import { Icon } from "astro-icon";
 <style> 
   
   .about__details {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-size: var(--fs-lg);
     line-height: 1.65em;
     text-align: justify;
+  } 
+
+  span {
+    float: right;
+    padding-top: .5rem;
+    font-size: .9rem;
+    
+  }
+
+  a {
+    color: var(--title-color);
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: var(--text-color);
   }
 
   .btn {
