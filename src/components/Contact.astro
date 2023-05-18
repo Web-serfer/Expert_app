@@ -1,12 +1,14 @@
 <section id="contact" class="contact section">
   <div class="contact__content container">
-    <h2 class="section__title">Обратная связь_</h2>
+    <h2 class="section__title">Обратная связь</h2>
     <div class="contact__container">
       <!-- contact info -->
       <div class="contact__info">
         <dl class="contact__list">
-          <dt>Phone:</dt>
-          <dd>8 (234) 456-33-33</dd>
+          <dt>Телефон:</dt>
+          <dd>
+            <a href="tel:+79128168672">+ 7 (912) 816-86-72</a>
+          </dd>
           <dt>Skype:</dt>
           <dd>Expert_086</dd>
           <dt>Email:</dt>
@@ -31,14 +33,14 @@
 
       <!-- contact form -->
       <div class="contact__form">
-        <p class="contact__form-title">Or just write me a letter here_</p>
+        <p class="contact__form-title">Напиши мне письмо</p>
 
         <form action="" id="contact-form">
           <!-- input 1 -->
           <div class="contact__input-div">
             <input
               type="text"
-              placeholder="Your name"
+              placeholder="Ваше имя"
               class="contact__input"
               id="contact-name"
             />
@@ -48,7 +50,7 @@
           <div class="contact__input-div">
             <input
               type="email"
-              placeholder="Your e-mail"
+              placeholder="Ваш e-mail"
               class="contact__input"
               id="contact-email"
             />
@@ -57,19 +59,18 @@
           <!-- text area -->
           <div class="contact__input-div">
             <textarea
-              placeholder="Type the message here"
+              placeholder="Введите ваше сообщение"
               id="message"
               cols="30"
               rows="10"
               class="contact__input textarea"></textarea>
           </div>
-
-          <p id="contact-message" class="contact_message text-sm">Message</p>
-
-          <button type="submit">SEND</button>
+          <button type="submit">ОТПРАВИТЬ</button>
         </form>
 
-        <p class="footer__copy">2002 - 2023 &copy; Expert086. All Right Reserved</p>
+        <p class="footer__copy">
+          2002 - 2023 &copy; Expert086.ru Все права защишены
+        </p>
       </div>
     </div>
   </div>
@@ -189,5 +190,24 @@
     opacity: 0.4;
     margin-top: 3.75rem;
     text-align: center;
+  }
+
+  /* ======= (Small Devices) ======= */
+  @media (width < 600px) {
+    .contact__container {
+      grid-template-columns: 1fr;
+    }
+
+    .contact__socials {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .contact__form {
+      padding-top: 2rem;
+    }
   }
 </style>

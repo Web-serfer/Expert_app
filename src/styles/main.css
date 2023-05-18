@@ -76,6 +76,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 button {
@@ -97,7 +98,6 @@ input {
   outline: none;
 }
 
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -117,6 +117,13 @@ hr {
   line-height: 1.17em;
   font-weight: var(--medium);
   margin-bottom: 2rem;
+  text-transform: underline;
+  text-decoration: none;
+  position: relative;
+  text-decoration: underline;
+  text-decoration-color: var(--text-color);
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
 }
 
 .text-lg {
@@ -142,10 +149,9 @@ hr {
   font-size: 1.2rem;
 }
 
-
-
 @media (width < 600px) {
   .section__title {
     text-align: center;
+    font-size: 1.8rem;
   }
 }

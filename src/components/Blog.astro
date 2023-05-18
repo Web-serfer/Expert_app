@@ -1,12 +1,12 @@
 ---
-import img1 from '../assets/blog-1.png'
-import img2 from '../assets/blog-2.png'
-import img3 from '../assets/blog-3.png'
+import img1 from "../assets/blog-1.png";
+import img2 from "../assets/blog-2.png";
+import img3 from "../assets/blog-3.png";
 ---
 
 <section id="blog" class="blog section container">
-  <hr>
-  <h2 class="section__title">Latest Posts_</h2>
+  <hr />
+  <h2 class="section__title">Последние посты</h2>
   <div class="post__container">
     <!-- post-card-1 -->
     <div class="post__card">
@@ -15,8 +15,10 @@ import img3 from '../assets/blog-3.png'
       <div class="post__content">
         <p class="post__date text-xs">October 10, 2022</p>
         <h3 class="post__title text-sm">HOW TO USE CSS-PREPROCESSOR</h3>
-        <p class="post__descr text-sm">Letraset sheets
-          containing Lorem Ipsum passages with the release of Letraset sheets...</p>
+        <p class="post__descr text-sm">
+          Letraset sheets containing Lorem Ipsum passages with the release of
+          Letraset sheets...
+        </p>
       </div>
     </div>
 
@@ -27,8 +29,10 @@ import img3 from '../assets/blog-3.png'
       <div class="post__content">
         <p class="post__date text-xs">November 12, 2022</p>
         <h3 class="post__title text-sm">SVG SPRITES VS ICON FONT</h3>
-        <p class="post__descr text-sm">Letraset sheets
-          containing Lorem Ipsum passages with the release of Letraset sheets...</p>
+        <p class="post__descr text-sm">
+          Letraset sheets containing Lorem Ipsum passages with the release of
+          Letraset sheets...
+        </p>
       </div>
     </div>
 
@@ -39,8 +43,10 @@ import img3 from '../assets/blog-3.png'
       <div class="post__content">
         <p class="post__date text-xs">June 20, 2023</p>
         <h3 class="post__title text-sm">HOW I ORGANIZE MY WORK WITH CODE</h3>
-        <p class="post__descr text-sm">Letraset sheets
-          containing Lorem Ipsum passages with the release of Letraset sheets...</p>
+        <p class="post__descr text-sm">
+          Letraset sheets containing Lorem Ipsum passages with the release of
+          Letraset sheets...
+        </p>
       </div>
     </div>
   </div>
@@ -54,7 +60,7 @@ import img3 from '../assets/blog-3.png'
     margin-bottom: 2.5rem;
   }
 
-  .post__img{
+  .post__img {
     vertical-align: middle;
   }
 
@@ -63,10 +69,10 @@ import img3 from '../assets/blog-3.png'
     padding: 1.25rem 1.875rem 2.5rem 1.25rem;
   }
 
-  .post__date{
+  .post__date {
     text-transform: uppercase;
     color: var(--text-color-alt);
-    margin-bottom: .8em;
+    margin-bottom: 0.8em;
   }
 
   .post__title {
@@ -76,5 +82,16 @@ import img3 from '../assets/blog-3.png'
   .post__descr {
     color: var(--text-color-alt);
     text-align: justify;
+  }
+
+  /* ======= (Small Devices) ======= */
+  @media (width < 600px) {
+
+    .section__title {
+      font-size: 1.8rem;
+    }
+    .post__container {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
