@@ -97,9 +97,6 @@ input {
   outline: none;
 }
 
-main {
-  width: 100%;
-}
 
 .container {
   max-width: 1200px;
@@ -147,25 +144,8 @@ hr {
 
 
 
-/*=============== Style Switcher ===============*/
-
-
-
-/*=============== BreakPoints ===============*/
-/* for large devices */
-@media screen and (max-width: 1200px) {
-}
-
-@media screen and (max-width: 992px) {
-}
-
-/* for medium devices */
-@media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 576px) {
-}
-
-/* for small devices */
-@media screen and (max-width: 350px) {
+@media (width < 600px) {
+  .section__title {
+    text-align: center;
+  }
 }

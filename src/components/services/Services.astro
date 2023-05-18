@@ -1,15 +1,14 @@
 ---
-import img1 from "../assets/web-design.png";
-import img2 from "../assets/laptop.png";
-import img3 from "../assets/smartphone-call.png";
-import img4 from "../assets/paint-palette.png";
-import img5 from "../assets/verified.png";
-import img6 from "../assets/operator.png";
+import img1 from "../../assets/web-design.png";
+import img2 from "../../assets/laptop.png";
+import img3 from "../../assets/smartphone-call.png";
+import img4 from "../../assets/paint-palette.png";
+import img5 from "../../assets/verified.png";
+import img6 from "../../assets/operator.png";
 ---
 
-
 <section id="services" class="services section container">
-  <hr>
+  <hr />
   <h2 class="section__title">Услуги</h2>
 
   <div class="services__container">
@@ -109,7 +108,7 @@ import img6 from "../assets/operator.png";
   </div>
 </section>
 
-<style>  
+<style>
   .services__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -143,7 +142,7 @@ import img6 from "../assets/operator.png";
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;    
+    height: 100%;
     animation: service-dot 2s linear infinite;
     animation-play-state: paused;
   }
@@ -173,6 +172,19 @@ import img6 from "../assets/operator.png";
   }
 
   .services__title {
-    margin-bottom: .8em;
+    margin-bottom: 0.8em;
+  }
+
+  /* ======= (Medium Devices) ======= */
+  @media (width < 1024px) {
+    .services__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  /* ======= (Small Devices) ======= */
+  @media (width < 600px) {
+    .services__container {
+      grid-template-columns: 1fr;
+    }    
   }
 </style>

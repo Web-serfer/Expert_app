@@ -1,11 +1,11 @@
 <section id="resume" class="resume section container">
-  <hr>
-  <h2 class="section__title">Resume_</h2>
+  <hr />
+  <h2 class="section__title">Резюме</h2>
 
   <div class="resume__container">
     <!-- EDUCATION -->
     <div class="resume__data">
-      <h3 class="resume__title">Education</h3>
+      <h3 class="resume__title">Образование</h3>
 
       <!-- item 1 -->
       <div class="resume__item">
@@ -20,7 +20,8 @@
         <p class="resume__date">2004 - 2005</p>
         <p class="resume__descr">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-          ipsa fuga fugit ut. Eaque quo necessitatibus perferendis.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          ipsa fuga fugit ut. Eaque quo necessitatibus perferendis.Lorem ipsum
+          dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
 
@@ -36,7 +37,7 @@
     </div>
     <!-- EMPOYMENT -->
     <div class="resume__data">
-      <h3 class="resume__title">Employment</h3>
+      <h3 class="resume__title">Деятельность</h3>
 
       <!-- item 1 -->
       <div class="resume__item">
@@ -51,7 +52,8 @@
         <p class="resume__date">2004 - 2005</p>
         <p class="resume__descr">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-          ipsa fuga fugit ut. Eaque quo necessitatibus perferendis.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          ipsa fuga fugit ut. Eaque quo necessitatibus perferendis.Lorem ipsum
+          dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
 
@@ -73,7 +75,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3.75rem;
-  }  
+  }
 
   .resume__item {
     border-left: 2px solid var(--primary-color);
@@ -108,5 +110,19 @@
 
   .resume__descr {
     text-align: justify;
+  }
+
+  /* ======= (Small Devices) ======= */
+  @media (width < 600px) {
+    .resume__container {
+      grid-template-columns: 1fr;
+    }
+
+
+  .resume__title {
+    color: var(--text-color);
+    letter-spacing: 0.08em;
+    margin-bottom: 2em;
+    font-size: 1.2rem;
   }
 </style>
